@@ -6,6 +6,7 @@ import arrowdown from '../../assets/iconn/arrowdown.png'
 import plus from '../../assets/iconn/plus.png'
 import grid from '../../assets/iconn/grid.png'
 import user from '../../assets/iconn/user.png'
+
 import profile1 from '../../assets/image/profile1.jpg'
 import profile2 from '../../assets/image/profile2.jpg'
 
@@ -13,6 +14,8 @@ import home from '../../assets/iconn/hut.png'
 import search from '../../assets/iconn/search.png'
 import video from '../../assets/iconn/video.png'
 import bag from '../../assets/iconn/bag.png'
+import chat from '../../assets/iconn/chat.png'
+import profile from '../../assets/iconn/user-profile.png'
 import { 
   StyleSheet, 
   Text, 
@@ -117,7 +120,9 @@ const Bio = () => {
           <ScrollView style = {{flexDirection: 'row'}}>
           <View style = {styles.cyp}>
             <View style = {styles.outline}>
-              <View style = {styles.addbio}/>
+              <View style = {styles.addbio}>
+                <Image source = {chat} style = {styles.chat}/>
+              </View>
               <Text style = {styles.addbio2}>Add Bio</Text>
               <Text style = {styles.addbio3}>Tell your followers a little bit</Text>
               <Text style = {styles.addbio3}>about yourself.</Text>
@@ -126,7 +131,9 @@ const Bio = () => {
               </View>
             </View>
             <View style = {styles.outline}>
-              <View style = {styles.editname}/>
+              <View style = {styles.editname}>
+                <Image source = {profile} style = {styles.userprofile} />
+              </View>
               <Text style = {styles.editname2}>Add Your Name</Text>
               <Text style = {styles.editname3}>Add your full name so your</Text>
               <Text style = {styles.editname3}>friends know that it's you.</Text>
@@ -446,5 +453,13 @@ const styles = StyleSheet.create({
     width: 420,
     height: 1,
     backgroundColor: 'black'
+  },
+  chat: {
+    marginTop: 11,
+    marginLeft: 11
+  },
+  userprofile: {
+    marginTop: 11,
+    marginLeft: 11,
   }
 })
